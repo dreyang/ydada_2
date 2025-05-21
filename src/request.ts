@@ -7,7 +7,9 @@ import { Message } from "@arco-design/web-vue";
 export const isDev = process.env.NODE_ENV === "development";
 
 const myAxios = axios.create({
-  baseURL: isDev ? "http://localhost:8101" : "https://ydada.code-nav.cn",
+  baseURL: isDev
+    ? "http://localhost:8101"
+    : "https://yudada-backend-2-162975-5-1360104016.sh.run.tcloudbase.com",
   timeout: 60000,
   withCredentials: true,
 });
