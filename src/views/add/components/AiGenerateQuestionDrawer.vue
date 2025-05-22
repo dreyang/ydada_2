@@ -132,11 +132,16 @@ const handleSSESubmit = async () => {
   }
   sseSubmitting.value = true;
   //创建sse请求
+  // 创建 SSE 请求
   const eventSource = new EventSource(
-    //一定要手动填写完整的后端地址
-    `http://localhost:8101/api/question/ai_generate/sse` +
-      `?appId=${props.appId}&optionNumber=${form.optionNumber}&questionNumber=${form.questionNumber}`
+    // todo 手动填写完整的后端地址
+    "http://localhost:8101/api/question/ai_generate/sse" +
+      `?appId=${props.appId}&optionNumber=${form.optionNumber}&questionNumber=${form.questionNumber}`,
+    {
+      withCredentials: true,
+    }
   );
+
   let first = true;
   //接收消息
   eventSource.onmessage = function (event) {
