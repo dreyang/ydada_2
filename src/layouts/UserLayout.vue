@@ -11,7 +11,7 @@
         <router-view />
       </a-layout-content>
       <a-layout-footer class="footer">
-        <a href="https://www.code-nav.cn" target="_blank"> by 杨杨杨 </a>
+        <a href="https://github.com/dreyang" target="_blank"> by 杨杨杨 </a>
       </a-layout-footer>
     </a-layout>
   </div>
